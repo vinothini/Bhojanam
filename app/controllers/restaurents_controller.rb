@@ -10,6 +10,7 @@ def create
 end
 
 def show
+@restaurent = Restaurent.find(params[:id])
 end
 
 def edit

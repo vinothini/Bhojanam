@@ -1,8 +1,2 @@
-<h2> Listing Restaurants </h2>
-<% @restaurents.each do |r| %>
-  <div class="restaurents">
-  <h3> <%= r.name %></h3>
-  <p class="address"> <%= r.address %> </p>
-  <p> <%= r.description %> </p>
-  </div>
-<% end %>
+<h3> show page </h3>
+<%= render @restaurents %>
