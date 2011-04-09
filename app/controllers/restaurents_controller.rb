@@ -4,9 +4,18 @@ def index
 end
 
 def new
+@restaurent = Restaurent.new
 end
 
 def create
+@restaurent = Restaurent.new(params[:restaurent])
+
+   if @restaurent.save
+   flash[:notice] = "restaurent stored"
+   redirect_to @restaurent  
+   else
+   render :action=>:new
+   end
 end
 
 def show
@@ -14,9 +23,19 @@ def show
 end
 
 def edit
+@restaurent = Restaurent.find(params[:id])
 end
 
 def update
+@restaurent = Restaurent.find(params[:id])
+
+   if @restaurent.update_attributes(params[:restaurent])
+   flash[:notice] = "restaurent updated"
+   redirect_to @restaurent  
+   else
+   render :action=>:edit
+   end
+
 end
 
 def destroy

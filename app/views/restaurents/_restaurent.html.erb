@@ -1,5 +1,13 @@
   <div class="restaurents">
   <h3> <%= link_to restaurent.name, restaurent %></h3>
+  <ul class="action_">
+<li>
+<%= link_to "edit",edit_restaurent_path(restaurent) %>
+</li>  
+</ul>
+   
+ 
+
   <p class="address"> <%= restaurent.address %> </p>
   <p> <%= restaurent.description %> </p>
   </div>
