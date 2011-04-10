@@ -1,0 +1,9 @@
+
+.restaurents
+  %h3 = link_to restaurent.name, restaurent 
+  %ul.action_links
+  %li= link_to "edit",edit_restaurent_path(restaurent)
+  %li= link_to "delete",restaurent_path(restaurent),:confirm=>"Are you sure?",:method=>:delete
+   
+  %p.address = restaurent.address 
+  %p= restaurent.description

@@ -39,6 +39,9 @@ def update
 end
 
 def destroy
+@restaurent = Restaurent.find(params[:id])
+@restaurent.destroy
+redirect_to restaurents_path
 end
 
 end
