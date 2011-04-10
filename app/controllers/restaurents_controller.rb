@@ -1,15 +1,19 @@
 class RestaurentsController < ApplicationController
+before_filter :authenticate_user!, :except=>[:index,:show]
+
+
 def index
 @restaurents = Restaurent.all
 end
 
 def new
 @restaurent = Restaurent.new
+
 end
 
 def create
 @restaurent = Restaurent.new(params[:restaurent])
-
+@restaurent.user = current_user
    if @restaurent.save
    flash[:notice] = "restaurent stored"
    redirect_to @restaurent  

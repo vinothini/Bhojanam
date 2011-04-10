@@ -1,0 +1,52 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset"
+@import "blueprint/grid"
+@import "restaurent"
+
+#header
+  +container
+  h1
+    margin: 16px 0
+    +column(10)
+    a
+      text-decoration: none
+      font-size: 2em
+      color: #222
+      font-family: "Permanent Marker", arial, serif
+#navigation
+  +container
+  ul
+    margin: 5px
+    li
+      display: inline
+      border-top: 2px solid #aaa
+      border-left: 2px solid #aaa
+      border-bottom: 2px solid #aaa
+      border-right: 2px solid #aaa
+    a
+      color: #333
+      text-decoration: none
+    li.selected
+      background-color: #222
+      a
+        color: #eee
+
+#content
+  +container
+  #left
+    +column(15)
+    mrgin-top: 10px 0
+  #right
+    +column(6)
+    margin-top: 10px 0
+    .sidebar_box
+      +column(5)
+      background-color: red
+      height: 200px
+#footer
+  +container
+

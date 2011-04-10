@@ -1,4 +1,6 @@
 Bhojanam::Application.routes.draw do
+  devise_for :users
+
   resources :restaurents
 
   # The priority is based upon order of creation:
